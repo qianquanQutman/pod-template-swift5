@@ -194,7 +194,7 @@ module Pod
     #----------------------------------------#
 
     def user_name
-      (ENV['GIT_COMMITTER_NAME'] || github_user_name || `git config user.name` || `<GITHUB_USERNAME>` ).strip
+      (`git config user.name` || ENV['GIT_COMMITTER_NAME'] || github_user_name || `<GITHUB_USERNAME>` ).strip
     end
 
     def github_user_name

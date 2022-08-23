@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  PROJECT
 //
-//  Created by 钱权 on TODAYS_DATE.
-//  Copyright (c) 钱权 PROJECT_OWNER. All rights reserved.
+//  Created by PROJECT_OWNER on TODAYS_DATE.
+//  Copyright (c) PROJECT_OWNER PROJECT_OWNER. All rights reserved.
 //
 
 import UIKit
