@@ -90,7 +90,7 @@ module Pod
       clean_template_files
       rename_template_files
       add_pods_to_podfile
-      customise_prefix
+#      customise_prefix
       rename_classes_folder
       ensure_carthage_compatibility
       reinitialize_git_repo
