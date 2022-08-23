@@ -12,18 +12,18 @@ module Pod
     end
 
     def perform
-      keep_demo = configurator.ask_with_answers("Would you like to include a demo application with your library", ["Yes", "No"]).to_sym
+      keep_demo = configurator.ask_with_answers("要不要创建demo", ["Yes", "No"]).to_sym
 
-      framework = configurator.ask_with_answers("Which testing frameworks will you use", ["Quick", "None"]).to_sym
-      case framework
-        when :quick
-          configurator.add_pod_to_podfile "Quick', '~> 2.2.0"
-          configurator.add_pod_to_podfile "Nimble', '~> 10.0.0"
-          configurator.set_test_framework "quick", "swift", "macos-swift"
-
-        when :none
-          configurator.set_test_framework "xctest", "swift", "macos-swift"
-      end
+#      framework = configurator.ask_with_answers("Which testing frameworks will you use", ["Quick", "None"]).to_sym
+#      case framework
+#        when :quick
+#          configurator.add_pod_to_podfile "Quick', '~> 2.2.0"
+#          configurator.add_pod_to_podfile "Nimble', '~> 10.0.0"
+#          configurator.set_test_framework "quick", "swift", "macos-swift"
+#
+#        when :none
+#          configurator.set_test_framework "xctest", "swift", "macos-swift"
+#      end
 
       Pod::ProjectManipulator.new({
         :configurator => @configurator,
