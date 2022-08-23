@@ -70,13 +70,13 @@ module Pod
     def run
       @message_bank.welcome_message
 
-      platform = self.ask_with_answers("What platform do you want to use?", ["iOS", "macOS"]).to_sym
+      platform = self.ask_with_answers("你要创建哪个平台lib", ["iOS", "macOS"]).to_sym
 
       case platform
         when :macos
           ConfigureMacOSSwift.perform(configurator: self)
         when :ios
-          framework = self.ask_with_answers("What language do you want to use?", ["Swift", "ObjC"]).to_sym
+          framework = self.ask_with_answers("你要是用哪种语言?", ["Swift", "ObjC"]).to_sym
           case framework
             when :swift
               ConfigureSwift.perform(configurator: self)
