@@ -32,6 +32,7 @@ TODO: Add long description of the pod here.
 
   s.source_files = '${POD_NAME}/Classes/**/*'
   
+  # s.static_framework = true
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
   # }
